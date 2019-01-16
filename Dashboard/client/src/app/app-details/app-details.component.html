@@ -1,0 +1,30 @@
+<div class="bg-black" style="min-height: 100vh">
+  <div class="p-4">
+      <div class="row">
+          <div *ngIf='app' class="col-12 col-sm-3">
+            <h2 class="text-center">
+              {{app.name}}
+            </h2>
+            <div class="data-block">
+              <div>Incidents</div>
+              <div>{{app.incidents}}</div>
+            </div>
+            <div class="data-block">
+                <div>Impacted For</div>
+                <div>{{app.impactedFor}}</div>
+            </div>
+            <div class="data-block">
+                <div>MTTA</div>
+                <div>{{app.mtta}}</div>
+            </div>
+            <div class="data-block">
+                <div>Anomalist Fetures</div>
+                <div>{{app.anomalistFetures}}</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-9">
+              <nvd3 [options]="options" [data]="data"></nvd3>
+          </div>
+        </div>
+  </div>
+</div>
